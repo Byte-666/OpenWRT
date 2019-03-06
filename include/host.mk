@@ -43,7 +43,7 @@ $(TMP_DIR)/.host.mk: $(TOPDIR)/include/host.mk
 		echo "GNU_HOST_NAME:=$$GNU_HOST_NAME" >> $@; \
 		TAR=`which gtar 2>/dev/null`; \
 		[ -n "$$TAR" -a -x "$$TAR" ] || TAR=`which gnutar 2>/dev/null`; \
-		[ -n "$$TAR" -a -x "$$TAR" ] || TAR=`which tar 2>/dev/null`; \
+		[ -n "$$TAR" -a -x "$$TAR" ] || TAR="`which tar 2>/dev/null` --format=gnu"; \
 		echo "TAR:=$$TAR" >> $@; \
 		FIND=`which gfind 2>/dev/null`; \
 		[ -n "$$FIND" -a -x "$$FIND" ] || FIND=`which find 2>/dev/null`; \

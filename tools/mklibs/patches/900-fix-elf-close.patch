@@ -1,0 +1,11 @@
+--- a/src/mklibs-readelf/elf.cpp
++++ b/src/mklibs-readelf/elf.cpp
+@@ -65,7 +65,7 @@ file *file::open (const char *filename)
+   }
+   catch (...)
+   {
+-    ::close (fd);
++    //::close (fd);
+     throw;
+   }
+ }

@@ -142,6 +142,8 @@ foreach my $mirror (@ARGV) {
 			push @extra, "$extra[0]/longterm/v$1";
 		}		
 		foreach my $dir (@extra) {
+			push @mirrors, "https://www.kernel.org/pub/$dir";
+			push @mirrors, "http://www.kernel.org/pub/$dir";
 			push @mirrors, "ftp://ftp.geo.kernel.org/pub/$dir";
 			push @mirrors, "http://ftp.geo.kernel.org/pub/$dir";
 			push @mirrors, "ftp://ftp.all.kernel.org/pub/$dir";
@@ -150,6 +152,8 @@ foreach my $mirror (@ARGV) {
 			push @mirrors, "http://ftp.de.kernel.org/pub/$dir";
 			push @mirrors, "ftp://ftp.fr.kernel.org/pub/$dir";
 			push @mirrors, "http://ftp.fr.kernel.org/pub/$dir";
+			push @mirrors, "ftp://ftp.kernel.org/pub/$dir";
+			push @mirrors, "http://ftp.kernel.org/pub/$dir";
 		}
     } elsif ($mirror =~ /^\@GNOME\/(.+)$/) {
 		push @mirrors, "http://ftp.gnome.org/pub/GNOME/sources/$1";
